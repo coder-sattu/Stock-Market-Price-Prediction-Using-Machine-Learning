@@ -1,0 +1,77 @@
+libraries requirement :
+
+pip install numpy pandas yfinance keras streamlit matplotlib tensorflow scikit-learn
+
+
+for activating environment :
+
+venv\Scripts\activate
+
+For Running That Project :
+
+streamlit run support.py
+
+For Run the project in cmd :
+
+cd Downloads\Stock_Market_Prediction_ML
+venv\Scripts\activate
+
+then --> streamlit run app1.py
+
+
+After Running those commands it shows :
+
+http://localhost:8501/
+
+Based on the code, this project predicts stock prices for 10 major tech companies, 
+which are defined in the companies list:
+
+1. AAPL (Apple)
+2. MSFT (Microsoft)
+3. GOOGL (Google/Alphabet)
+4. AMZN (Amazon)
+5. NVDA (NVIDIA)
+6. META (Meta/Facebook)
+7. TSM (Taiwan Semiconductor)
+8. AVGO (Broadcom)
+9. ASML (ASML Holding)
+10. AMD (Advanced Micro Devices)
+The code fetches data for these companies and displays their:
+
+- Current Price
+- 30-Day Change
+- Yearly Change
+- Market Cap
+- Performance trends (Bullish/Bearish)
+However, the detailed price prediction using the ML model is performed for 
+whichever single stock symbol the user inputs in the text box (default is "GOOG").
+
+indicator : -->
+1. RSI (Relative Strength Index):
+- A momentum indicator that measures the speed and magnitude of price changes
+- Ranges from 0 to 100
+- Values:
+  - Above 70: Stock may be overbought (potential sell signal)
+  - Below 30: Stock may be oversold (potential buy signal)
+  - Between 30-70: Neutral zone
+2. MACD (Moving Average Convergence Divergence):
+- Shows the relationship between two moving averages of a stock's price
+- Components:
+  - MACD Line: Difference between 12-day and 26-day exponential moving averages
+  - Signal Line: 9-day EMA of MACD
+- Signals:
+  - MACD crosses above Signal Line: Bullish signal
+  - MACD crosses below Signal Line: Bearish signal
+3. Trend Strength:
+- Measures the intensity of the current market trend
+- In your application, it's calculated from market change percentage
+- Categories:
+  - Strong: Above 20%
+  - Moderate: Between 10-20%
+  - Weak: Below 10%
+These indicators together help traders:
+
+- Identify potential entry and exit points
+- Understand market momentum
+- Confirm trend directions
+- Spot potential reversals
